@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Rojas Avila Jean Pool</title>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" class="banner">
+        <a href="#" class="logo">JP</a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Trabajos</a></li>
+                <li><a href="#">lenguajes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Mi Portafoleo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ipsa quis doloremque, totam temporibus dolor, rem expedita neque molestias culpa numquam suscipit ullam eligendi fuga obcaecati eius ea perspiciatis ad deserunt placeat sunt quidem. Ad quaerat ipsa amet tempore, reprehenderit facere dolor est iusto recusandae. Vel exercitationem autem dolorum eveniet pariatur aut provident incidunt, adipisci perferendis repellendus tenetur error, non, animi accusantium tempora. At maxime tempora eveniet, totam, ab fugit nemo illo, eius dolorem consequuntur id vero laudantium accusamus! Eveniet, quam fugiat, rerum consequatur iusto quod modi culpa mollitia veritatis exercitationem rem assumenda non animi sed, esse enim? Odio, quisquam?</p><br>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ipsa quis doloremque, totam temporibus dolor, rem expedita neque molestias culpa numquam suscipit ullam eligendi fuga obcaecati eius ea perspiciatis ad deserunt placeat sunt quidem. Ad quaerat ipsa amet tempore, reprehenderit facere dolor est iusto recusandae. Vel exercitationem autem dolorum eveniet pariatur aut provident incidunt, adipisci perferendis repellendus tenetur error, non, animi accusantium tempora. At maxime tempora eveniet, totam, ab fugit nemo illo, eius dolorem consequuntur id vero laudantium accusamus! Eveniet, quam fugiat, rerum consequatur iusto quod modi culpa mollitia veritatis exercitationem rem assumenda non animi sed, esse enim? Odio, quisquam?</p><br>
+    </section>
+
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky',window.scrollY > 0);
+        });
+
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
