@@ -22,6 +22,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     transition: 1s;
+    z-index: 2;
 }
 header.sticky{
     height: 80px;
@@ -34,6 +35,7 @@ header .banner{
     height: 100%;
     object-fit: cover;
     transition: 1s;
+    z-index: 1;
 }
 header.sticky .banner{
     opacity: 0.5;
@@ -98,6 +100,10 @@ section h2{
 }
 section p{
     font-size: 1.2em;
+}
+.parte2{
+    height: 110vh;
+    color: white;
 }
 @media (max-width: 991px){
     section,
