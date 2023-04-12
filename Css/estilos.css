@@ -105,6 +105,25 @@ section p{
     height: 110vh;
     color: white;
 }
+.bitacora{
+    width: 100%;
+    height: 350px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.bita2{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url(https://th.bing.com/th/id/R.165dd3f84242c26e4dda7e96f4162d56?rik=B%2fGXqV4yqtrKcQ&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f35700000%2fChibi-yukino-yukinoshita-35771658-572-674.png&ehk=QB3qRWK0GxwplSDNmQQoO96nAvG2FOJuXGxcr6CEKy0%3d&risl=&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -35px;
+    right: 10%;
+    
+}
 @media (max-width: 991px){
     section,
     header{
@@ -151,14 +170,14 @@ section p{
         width: 50px;
         height: 50px;
         cursor: pointer;
-        background: #fff url(cerrar.png);
+        background: #fff url(/images/cerrar.png);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 10px;
     }
     header.sticky .toggle.active{
-        background: #fff url(cruzar.png);
+        background: #fff url(/images/cruzar.png);
         background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
