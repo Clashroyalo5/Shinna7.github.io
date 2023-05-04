@@ -17,3 +17,10 @@ window.addEventListener('scroll', function() {
     prota2.style.marginLeft = value * 0.7 + 'px';
     prota1.style.left = value * -0.7 + 'px';
 })
+
+const navigation = document.querySelector('nav');
+
+document.querySelector('.menu').onclick = function(){
+    this.classList.toggle('active');
+    navigation.classList.toggle('active');
+}
