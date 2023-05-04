@@ -1,187 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
-*
-{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300&family=Rancho&display=swap');
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
-    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    min-height: 1000px;
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
+
+/*Encabezados*/
 header{
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 80px 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    object-fit:cover;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo{
+    width: 15vmax;
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #110011;
+    padding: 6px 20px;
+    border-radius: 20px;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    background: #ddccdd;
+    color: #110011;
+}
+
+/*Seccion */
+
+section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+/*Desvanecimineto*/
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, #c2e9fb,transparent);
+    z-index: 10;
+}
+
+section img{
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 0 100px;
-    background: #000;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    transition: 1s;
-    z-index: 2;
-}
-header.sticky{
-    height: 80px;
-}
-header .banner{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    transition: 1s;
-    z-index: 1;
+    pointer-events: none;
+    transform: translateY(80px);
 }
-header.sticky .banner{
-    opacity: 0.5;
-}
-header .logo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 15vw;
-    color: #fff;
-    font-weight: 700;
-    transition: 1s;
-    text-decoration: none;
-    z-index: 1;
-    text-shadow: 0 0 5px black,0 0 10px black,0 0 15px black,0 0 20px black;
-}
-header.sticky .logo{
-    position: absolute;
-    font-size: 2em;
-    left: 100px;
-    transform: translate(0,-50%);
-}
-nav{
-    position: relative;
-    display: flex;
-    z-index: 1;
-}
-nav ul{
-    position: relative;
-    display: flex;
-    transition: 0.25s;
-    transform: translateX(100px);
-    opacity: 0;
-}
-header.sticky nav ul{
-    transform: translateX(0);
-    opacity: 1;
-    transition-delay: 0.75s;
-    opacity: 1;
-    visibility: visible;
-}
-nav ul li{
-    list-style: none;
-}
-nav ul li a{
-    color: #fff;
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    text-decoration: none;
-}
-nav ul li a:hover{
-    color: #ff275f;
-}
-section{
-    margin-top: 50vh;
-    padding: 100px;
-}
-section h2{
-    font-size: 3em;
-}
-section p{
-    font-size: 1.2em;
-}
-.parte2{
-    height: 110vh;
-    color: white;
-}
-.bitacora{
-    width: 100%;
-    height: 350px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-.bita2{
-    display: flex;
-    width: 200px;
-    height: 200px;
-    background-image: url(https://th.bing.com/th/id/R.165dd3f84242c26e4dda7e96f4162d56?rik=B%2fGXqV4yqtrKcQ&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f35700000%2fChibi-yukino-yukinoshita-35771658-572-674.png&ehk=QB3qRWK0GxwplSDNmQQoO96nAvG2FOJuXGxcr6CEKy0%3d&risl=&pid=ImgRaw&r=0);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    top: -35px;
-    right: 10%;
-    
-}
-@media (max-width: 991px){
-    section,
-    header{
-        padding: 40px;
-    }
-    section h2{
-        font-size: 2em;
-    }
-    header.sticky .logo{
-        left: 40px;
-    }
-    header.sticky .banner{
-        opacity: 0;
-    }
-    nav ul{
-        display: none;
-        opacity: 0;
-        visibility: hidden;
-    }
-    nav.active ul{
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 80px);
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    header.sticky nav ul{
-        opacity: 1;
-        visibility: visible;
-    }
-    nav ul li a{
-        font-size: 1.5em;
-        padding: 5px 15px;
-    }
-    header.sticky .toggle{
-        position: fixed;
-        top: 15px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        background: #fff url(/images/cerrar.png);
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 10px;
-    }
-    header.sticky .toggle.active{
-        background: #fff url(/images/cruzar.png);
-        background-size: 30px;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 10px;
-    }
 
+/*Textos*/
+
+section #slogan{
+    position: absolute;
+    color: #110011;
+    font-size: 7vmax;
+    text-align: center;
+    font-family: 'Rancho', sans-serif;
+    line-height: 0.8em;
+    white-space: nowrap;
+    transform: translateY(-200px);
+    margin-left: 8vw;
+}
+
+section #btn{
+    text-decoration: none;
+    display: inline-block;
+    background: #110011;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transform: translatey(200px);
+    margin-left: 100px;
+}
+
+section #btn:hover{
+    background: #4d003d;
+}
+
+/*Seccion del scroll*/
+.sec{
+    background: #c2e9fb;
+    position: relative;
+    padding: 80px;
+}
+.sec h2{
+    font-size: 3.5vw;
+    color: #ffb199;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.sec h3{
+    font-size: 2vw;
+    color: #4d003d;
+    margin-bottom: 10px;
+}
+.sec p{
+    font-size: 1.2vw;
+    color: #4d003d;
 }
