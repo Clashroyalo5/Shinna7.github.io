@@ -108,7 +108,7 @@ section #btn{
     font-size: 1.2em;
     font-weight: 500;
     transform: translatey(200px);
-    margin-left: 100px;
+    margin-left: 80px;
 }
 
 section #btn:hover{
@@ -138,10 +138,16 @@ section #btn:hover{
 }
 /*Section */
 @media(max-width:991px){
+    nav ul li{
+        margin-left: 0px;
+    }
     .sec{
         padding: 60px;
     }
-    .sec p{
+    .sec h2{
+        font-size: 1.3em;
+    }
+    .sec p,.sec h3{
         font-size: 1em;
     }
     header .menulist{
@@ -152,10 +158,13 @@ section #btn:hover{
         opacity: 0;
         visibility: hidden;
     }
+    nav ul li a{
+        font-size: 0.95em;
+    }
     nav.active ul{
         position: relative;
         top: 50px;
-        margin-left: -150px;
+        margin-left: -89%;
         display: flex;
         opacity: 1;
         visibility: visible;
@@ -176,6 +185,9 @@ section #btn:hover{
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    section #btn{
+        margin-left: 10px;
     }
 }
 
