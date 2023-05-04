@@ -138,10 +138,10 @@ section #btn:hover{
 }
 /*Section */
 @media(max-width:991px){
-    sec{
+    .sec{
         padding: 60px;
     }
-    sec p{
+    .sec p{
         font-size: 1em;
     }
     header .menulist{
