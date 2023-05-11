@@ -12,42 +12,118 @@ body {
 }
 
 /*Encabezados*/
-header{
+.logo{
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    font-size: 2rem;
+    
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    transition: 0.2s;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+}
+.navigation.active{
+    visibility: visible ;
+    opacity: 1;
+    overflow: overlay;
+}
+
+.navigation .navArea{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .navArea ul li{
+    list-style: none;
+}
+.navigation .navArea ul li::before{
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 80px 30px 50px;
-    display: flex;
-    justify-content: space-between;
-    object-fit:cover;
-    align-items: center;
-    z-index: 1000;
+    height: 100%;
+    background: #f00;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s;
 }
-header .logo{
-    width: 15vmax;
+.navigation .navArea ul li:nth-child(1):before{
+    background: #E8998D;
+}
+.navigation .navArea ul li:nth-child(2):before{
+    background: #A2AEBB;
+}
+.navigation .navArea ul li:nth-child(3):before{
+    background: #DBD053;
+}
+.navigation .navArea ul li:nth-child(4):before{
+    background: #F29E4C;
+}
+.navigation .navArea ul li:nth-child(5):before{
+    background: #51355A;
+}
+
+.navigation .navArea ul li:hover::before{
+opacity: 1;
+}
+.navigation .navArea ul li a{
+    font-size: 3em;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+.navigation .navArea ul li:hover a{
+    color: rgba(255, 255, 255, 1);
+}
+.imgArea{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background: crimson;
+}
+.imgArea img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menuToggle{
+    position: fixed ;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: url(/images/lista.svg);
+    z-index: 1000;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
 }
-nav ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menuToggle.active{
+    background:  url(/images/close.svg);
+    z-index: 1000;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-nav ul li{
-    list-style: none;
-    margin-left: 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: #110011;
-    padding: 6px 20px;
-    border-radius: 20px;
-}
-nav ul li a:hover,
-nav ul li a.active{
-    background: #ddccdd;
-    color: #110011;
-}
+
 
 /*Seccion */
 
@@ -239,6 +315,58 @@ footer .container .Contact .info li a{
 
 /*Section */
 @media(max-width:991px){
+    .logo{
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        font-size: 1.7rem;
+        
+    }
+    .navigation .navArea{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    .navigation .navArea ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+    .navigation .navArea ul li{
+        border-radius: 12px;
+        border: 2px solid #fff;
+        margin: 5px 10px;
+        padding: 5px 10px;
+    }
+    .navigation .navArea ul li:hover{
+        background: #ff355a;
+    }
+    .navigation .navArea ul li a{
+        color: #fff;
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+    .imgArea{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #f00;
+    }
+    .navigation .navArea ul li:hover::before{
+        opacity: 0;
+    }
+    .imgArea{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #f00;
+        opacity: 0.7;
+    }
     nav ul li{
         margin-left: 0px;
     }

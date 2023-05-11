@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="./Css/estilos.css">
 </head>
 <body>
-    <header id="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Kyoukai_no_Kanata_Ill_be_here_logo.svg/1280px-Kyoukai_no_Kanata_Ill_be_here_logo.svg.png" alt="logo" class="logo">
-        <div class="menu"></div>    
-        <nav>
-                <ul class="menulist">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-    </header>
+    <div class="logo">
+        <h2>JP</h2>
+    </div>
+    <div class="menuToggle" onclick="ToggleMenu();"></div>
+    <div class="navigation">
+        <div class="navArea">
+        <ul>
+            <li><a href="#" onmouseenter="changeImagen('https://i.pinimg.com/564x/d5/a3/70/d5a370e5985c07bddf04e5713ba32280.jpg')">Inicio</a></li>
+            <li><a href="#" onmouseenter="changeImagen('https://i.pinimg.com/564x/27/d6/72/27d6724050143771c1bd2b5fa07b30dc.jpg')">Sobre</a></li>
+            <li><a href="#" onmouseenter="changeImagen('https://i.pinimg.com/564x/25/f4/ec/25f4ec241d9384c98e96eca77531de68.jpg')">Servicios</a></li>
+            <li><a href="#" onmouseenter="changeImagen('https://i.pinimg.com/564x/9c/08/67/9c08672b476b062160b32f4299ec58a9.jpg')">Portafoleo</a></li>
+            <li><a href="#" onmouseenter="changeImagen('https://i.pinimg.com/564x/6a/57/cc/6a57ccb9b41fe598669bd7c875123bdf.jpg')">Equipo</a></li>
+        </ul>
+        </div>
+        <div class="imgArea">
+            <img src="https://i.pinimg.com/564x/27/d6/72/27d6724050143771c1bd2b5fa07b30dc.jpg" alt="" id="slider">
+        </div>
+    </div>
 
     <section>
         <img src="./images/prota1.png" alt="prota1" id="prota1">
@@ -82,9 +88,21 @@
         </div>
     </footer>
     <div class="copyrighText">
-        <p>Copright 2023 JP. Portafoleo </p>
+        <p>Copyright 2023 JP. Portafoleo </p>
     </div>
 </div>
     <script src="./javascript/java.js"></script>
+    <script>
+        function changeImagen(anything){
+            document.getElementById('slider').src =anything;
+        }
+
+        function ToggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
